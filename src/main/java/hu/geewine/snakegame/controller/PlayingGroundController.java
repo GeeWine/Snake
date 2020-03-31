@@ -22,7 +22,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -206,7 +205,6 @@ public class PlayingGroundController {
                 private long lastUpdate = 0;
                 boolean snakeAlive = true;
 
-                @SneakyThrows
                 @Override
                 public void handle(long now) {
                     if (!snakeAlive && now - lastUpdate >= 2_000_000_000) {

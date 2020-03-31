@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane id="mainTabPane" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.geewine.snakegame.controller.PlayingGroundController">
+  <tabs>
+    <Tab text="%game">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <SplitPane dividerPositions="0.12126537785588752" orientation="VERTICAL" prefHeight="571.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="70.0" prefWidth="798.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="348.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox alignment="CENTER_RIGHT" prefHeight="63.0" prefWidth="150.0" spacing="15.0">
+                                       <children>
+                                          <Label text="%width" />
+                                          <Label text="%height" />
+                                       </children>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="62.0" spacing="10.0">
+                                       <children>
+                                          <Spinner fx:id="playGroundWidth" />
+                                          <Spinner fx:id="playGroundHeight" layoutX="10.0" layoutY="10.0" />
+                                       </children>
+                                    </VBox>
+                                    <Button mnemonicParsing="false" onAction="#setGameOn" text="%start">
+                                       <HBox.margin>
+                                          <Insets left="60.0" />
+                                       </HBox.margin></Button>
+                                    <Button mnemonicParsing="false" onAction="#endGame" text="%stop">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="450.0" prefHeight="71.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="98.0" spacing="10.0">
+                                       <children>
+                                          <Label text="%lifes" />
+                                          <Label text="%yourPoints" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="68.0" spacing="10.0">
+                                       <children>
+                                          <Label fx:id="lifesLabel" />
+                                          <Label fx:id="pointsLabel" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="110.0">
+                                       <children>
+                                          <Label fx:id="recordLabel" text="%record" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label fx:id="recordLabel" />
+                                       </children>
+                                    </VBox>
+                                 </children></HBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane fx:id="playingGround" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: lightGrey;" />
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="%records">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <TableView fx:id="recordTable" layoutY="70.0" prefHeight="501.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+                  <Pane layoutX="42.0" layoutY="34.0" prefHeight="70.0" prefWidth="800.0" AnchorPane.bottomAnchor="501.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="51.0" layoutY="27.0" text="%topTen">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

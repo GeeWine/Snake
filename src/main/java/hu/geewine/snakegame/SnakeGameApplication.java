@@ -36,6 +36,10 @@ public class SnakeGameApplication extends Application {
 
     private static PropertiesFactoryBean mainProperties;
 
+    public static void main(String[] args) {
+        launch(SnakeGameApplication.class, args);
+    }
+
     @Override
     public void init() throws Exception {
 

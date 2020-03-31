@@ -67,15 +67,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>com.zenjava</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>8.8.3</version>
-                <configuration>
-                    <vendor>GeeWine</vendor>
-                    <mainClass>hu.geewine.snakegame.SnakeGameApplication</mainClass>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
